@@ -1,6 +1,6 @@
-import { render } from '@testing-library/react'
+//import { render } from '@testing-library/react'
 import React from 'react'
-import ReactDOM from 'react-dom'
+//import ReactDOM from 'react-dom'
 
 export  function Square(props){
     var a = [1,2,3,4,5,6,7,8,9,10];
@@ -14,10 +14,10 @@ export  function Square(props){
 
 
 export class  Board extends React.Component{
-    constructor(props){
+     /* constructor(props){
      super(props)
     // this.state={table: this.props.value };
-    }
+    }  */
     
     renderSquare(i) {
         return (<scan>
