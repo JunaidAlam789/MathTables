@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-//import { Board } from './compnents';
-import { Square, Board } from './compnents';
+import { Square } from './components';
+//import { Square, Board } from './components';
 
 ReactDOM.render(
 <>

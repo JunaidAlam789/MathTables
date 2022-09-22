@@ -14,10 +14,10 @@ export  function Square(props){
 
 
 export class  Board extends React.Component{
-     /* constructor(props){
+      constructor(props){
      super(props)
     // this.state={table: this.props.value };
-    }  */
+    }  
     
     renderSquare(i) {
         return (<scan>
