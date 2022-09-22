@@ -1,17 +1,20 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+//import { Board } from './compnents';
+import { Square, Board } from './compnents';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+ReactDOM.render(
+<>
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+<scan className='square'>
+<scan className='table'><Square  value={4} /></scan>
+<scan className='table'><Square  value={5} /></scan>
+<scan className='table'><Square  value={6} /></scan>
+<scan className='table'><Square  value={7} /></scan>
+<scan className='table'><Square  value={8} /></scan>
+<scan className='table'><Square  value={9} /></scan>
+</scan>
+
+</>,
+document.getElementById('app'));
