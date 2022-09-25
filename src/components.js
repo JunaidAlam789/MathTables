@@ -1,5 +1,6 @@
 //import { render } from '@testing-library/react'
 import React from 'react'
+const useState= React.useState
 //import ReactDOM from 'react-dom'
 
 export  function Square(props){
@@ -13,21 +14,40 @@ export  function Square(props){
       
 
 
-export class  Board extends React.Component{
-      constructor(props){
-     super(props)
-    // this.state={table: this.props.value };
-    }  
+export function Board(props){
+     
+    const [number, setNumber]=useState(4)
     
-    renderSquare(i) {
-        return (<scan>
-        <Square value={i} className='square' />
+     
+        return (
+        
+        <scan>
+            <AddForm setNumber={setNumber} number={number} />
+       <Square value={number} className='square' />
         </scan>
         );
       }
-    render()
-        {
-    return ( this.renderSquare(this.props.value)  );
-    }
+    
+
+    export function AddForm(props){
+       const [numb, setNumb]=useState(5)
+
+        function formEventHandler(e){
+            e.preventDefault()
+         props.setNumber(numb) 
+         //lert(numb) 
+        }
+        return(
+            <form onSubmit={formEventHandler}>
+                <fieldset>
+                    <legend> Table </legend>
+                <input onChange={e => setNumb(e.target.value)} placeholder="Number for Table"></input>
+                <button>Submit</button>
+                </fieldset>
+            </form>
+
+        )
+
+
     }
 

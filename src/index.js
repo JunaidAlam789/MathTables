@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import { Square } from './components';
-//import { Square, Board } from './components';
+//import { Square } from './components';
+import { Square, Board, AddForm } from './components';
 
 ReactDOM.render(
 <>
-
+<scan className='table'><Board  value={4} /></scan>
 <scan className='square'>
 <scan className='table'><Square  value={4} /></scan>
 <scan className='table'><Square  value={5} /></scan>
