@@ -1,5 +1,5 @@
 //import { render } from '@testing-library/react'
-import { toHaveFocus } from '@testing-library/jest-dom';
+//import { toHaveFocus } from '@testing-library/jest-dom';
 import React from 'react'
 const useState= React.useState
 //import ReactDOM from 'react-dom'
@@ -12,7 +12,7 @@ export  function Square(props){
      let i=0;   
     const tables = a.map((move)=>{
         for(let j=0; j<=9; j++){
-            b[j]=(b[j] != 0) ? (b[j]): " wrong answer "
+            b[j]=(b[j] !== 0) ? (b[j]): " wrong answer "
           }
         return(<>
     {/* <h1>{props.value}x{move}={move*props.value}</h1> */}
@@ -97,12 +97,13 @@ export function Board(props){
 
     export function AddFormQuiz(props){
         const [numb, setNumb]=useState([4,8,12,16,20,24,28,32,36,40])
-        const [answers, setAnswers]=useState([4,8,12,16,20,24,28,32,36,40])
+       // const [answers, setAnswers]=useState([4,8,12,16,20,24,28,32,36,40])
        
 
          function formEventHandler(e){
              e.preventDefault()
           //props.setNumber(numb) 
+          setNumb([1,1,1,1,1,1,1,1,1,1])
           if (true) {alert(numb)}
           //lert(numb) 
         
@@ -112,16 +113,16 @@ export function Board(props){
                  <fieldset>
                      <legend> Table </legend>
                 
-                  <p>{props.number} x 1 = <input onChange={e => {if (e.target.value== props.number *1 ){ props.setNumb1(e.target.value)} else {props.setNumb1(0)} }} placeholder="Ans"></input></p> 
-                  <p>{props.number} x 2 = <input onChange={e => {if (e.target.value== props.number *2 ){ props.setNumb2(e.target.value)} else {props.setNumb2(0)} }} placeholder="Ans"></input></p> 
-                  <p>{props.number} x 3 = <input onChange={e => {if (e.target.value== props.number *3 ){ props.setNumb3(e.target.value)} else {props.setNumb3(0)} }} placeholder="Ans"></input></p> 
-                  <p>{props.number} x 4 = <input onChange={e => {if (e.target.value== props.number *4 ){ props.setNumb4(e.target.value)} else {props.setNumb4(0)} }} placeholder="Ans"></input></p> 
-                  <p>{props.number} x 5 = <input onChange={e => {if (e.target.value== props.number *5 ){ props.setNumb5(e.target.value)} else {props.setNumb5(0)} }} placeholder="Ans"></input></p> 
-                  <p>{props.number} x 6 = <input onChange={e => {if (e.target.value== props.number *6 ){ props.setNumb6(e.target.value)} else {props.setNumb6(0)} }} placeholder="Ans"></input></p> 
-                  <p>{props.number} x 7 = <input onChange={e => {if (e.target.value== props.number *7 ){ props.setNumb7(e.target.value)} else {props.setNumb7(0)} }} placeholder="Ans"></input></p> 
-                  <p>{props.number} x 8 = <input onChange={e => {if (e.target.value== props.number *8 ){ props.setNumb8(e.target.value)} else {props.setNumb8(0)} }} placeholder="Ans"></input></p> 
-                  <p>{props.number} x 9 = <input onChange={e => {if (e.target.value== props.number *9 ){ props.setNumb9(e.target.value)} else {props.setNumb9(0)} }} placeholder="Ans"></input></p> 
-                  <p>{props.number} x 10 = <input onChange={e => {if (e.target.value== props.number *10 ){ props.setNumb10(e.target.value)} else {props.setNumb10(0)} }} placeholder="Ans"></input></p> 
+                  <p>{props.number} x 1 = <input onChange={e => {if (e.target.value=== props.number *1 ){ props.setNumb1(e.target.value)} else {props.setNumb1(0)} }} placeholder="Ans"></input></p> 
+                  <p>{props.number} x 2 = <input onChange={e => {if (e.target.value=== props.number *2 ){ props.setNumb2(e.target.value)} else {props.setNumb2(0)} }} placeholder="Ans"></input></p> 
+                  <p>{props.number} x 3 = <input onChange={e => {if (e.target.value=== props.number *3 ){ props.setNumb3(e.target.value)} else {props.setNumb3(0)} }} placeholder="Ans"></input></p> 
+                  <p>{props.number} x 4 = <input onChange={e => {if (e.target.value=== props.number *4 ){ props.setNumb4(e.target.value)} else {props.setNumb4(0)} }} placeholder="Ans"></input></p> 
+                  <p>{props.number} x 5 = <input onChange={e => {if (e.target.value=== props.number *5 ){ props.setNumb5(e.target.value)} else {props.setNumb5(0)} }} placeholder="Ans"></input></p> 
+                  <p>{props.number} x 6 = <input onChange={e => {if (e.target.value=== props.number *6 ){ props.setNumb6(e.target.value)} else {props.setNumb6(0)} }} placeholder="Ans"></input></p> 
+                  <p>{props.number} x 7 = <input onChange={e => {if (e.target.value=== props.number *7 ){ props.setNumb7(e.target.value)} else {props.setNumb7(0)} }} placeholder="Ans"></input></p> 
+                  <p>{props.number} x 8 = <input onChange={e => {if (e.target.value=== props.number *8 ){ props.setNumb8(e.target.value)} else {props.setNumb8(0)} }} placeholder="Ans"></input></p> 
+                  <p>{props.number} x 9 = <input onChange={e => {if (e.target.value=== props.number *9 ){ props.setNumb9(e.target.value)} else {props.setNumb9(0)} }} placeholder="Ans"></input></p> 
+                  <p>{props.number} x 10 = <input onChange={e => {if (e.target.value=== props.number *10 ){ props.setNumb10(e.target.value)} else {props.setNumb10(0)} }} placeholder="Ans"></input></p> 
                   <button>Submit</button>
                  </fieldset>
              </form>
