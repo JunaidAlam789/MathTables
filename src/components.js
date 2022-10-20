@@ -86,13 +86,13 @@ const useState= React.useState
         <fieldset>
         {i.map((index)=>{return (
        
-        <p key={"12"+keys[index]}>{number} x {index+1} = <input onChange={(e)=>onChangeInput1(e,index)} keys={13+keys[index+10]} index={index}  placeholder="Ans"></input> {ans[index]} </p> 
+        <h3 key={"12"+keys[index]}>{number} x {index+1} = <input onChange={(e)=>onChangeInput1(e,index)} keys={13+keys[index+10]} index={index}  placeholder="Ans"></input> {ans[index]} </h3> 
        
         ) })}
         <button>Submit</button>
         </fieldset>
         </form >
-        <p>Powered by KvobjeSoft</p>
+        <h3>Powered by KvobjeSoft</h3>
         </>);
    
 
