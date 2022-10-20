@@ -81,12 +81,12 @@ const useState= React.useState
             <button>Submit</button>
             </fieldset>
         </form>
-         
+         <h1>Multiplication Table of {number}</h1>
         <form key="1235" onSubmit={formEventHandler3} >
         <fieldset>
         {i.map((index)=>{return (
        
-        <h1 key={"12"+keys[index]}>{number} x {index+1} = <input onChange={(e)=>onChangeInput1(e,index)} keys={13+keys[index+10]} index={index}  placeholder="Ans"></input> {ans[index]} </h1> 
+        <p key={"12"+keys[index]}>{number} x {index+1} = <input onChange={(e)=>onChangeInput1(e,index)} keys={13+keys[index+10]} index={index}  placeholder="Ans"></input> {ans[index]} </p> 
        
         ) })}
         <button>Submit</button>
